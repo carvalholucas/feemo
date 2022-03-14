@@ -4,66 +4,39 @@ const wrapperModifiers = {
   free: () => css`
     
   `,
-  premium: (color) => css`
-    background: ${color};
-  `,
-  pro: () => css`
-    padding: 0;
-    
-    .bg {
-      background: #7a7a7a;
-      border-radius: 10px 10px 0 0;
-      height: 200px;
-      position: relative;
-
-      .logo {
-        width: 100px;
-        height: 100px;
-        background: #000;
-        border-radius: 50%;
-        border: 3px solid #FFF;
-        position: absolute;
-        bottom: 0;
-        transform: translate(15px, 50px);
-      }
+  premium: () => css`
+    .header > span {
+      margin-left: calc(70px + 1rem);
     }
 
-    .ticket-wrapper-desc { padding: 1rem }
     .ticket-title {
-      margin-top: 3rem;
+      margin-top: 2rem;
     }
   `,
+  pro: () => css` `,
 }
 
 export const Container = styled.div`
   ${({ type, color, textColor }) => css`
     background: #FFF;
-    border: 1px solid #D5D5D5;
-    border-radius: 10px;
-    padding: 1rem;
+    border-radius: 15px;
     margin-bottom: 1rem;
 
     &:nth-child(2) {
       margin-top: 1rem;
     }
 
-    header {
-      align-items: flex-start;
-      display: flex;
-      justify-content: space-between;
-    }
-
     .ticket-title {
-      color: ${textColor ? textColor : '#383838'};
+      color: ${textColor ? textColor : '#000000'};
       font-size: 1.2rem;
-      margin-bottom: 0;
+      margin: 0;
     }
 
     .ticket-description {
       color: ${textColor ? textColor : '#686868'};
-      font-size: .8rem;
+      font-size: .9rem;
       font-weight: 300;
-      line-height: 1.2rem;
+      line-height: 1.5rem;
       margin-bottom: 0;
     }
 
@@ -71,23 +44,37 @@ export const Container = styled.div`
   `}
 `
 
-export const CompanyName = styled.p`
-  background: #d8d5e2;
-  color: #3B21A3;
-  margin: 0;
-  display: inline;
-  font-weight: 500;
-  padding: 0.3rem;
-  font-size: .8rem;
-  border-radius: 5px;
+export const Header = styled.header`
+  ${({ color }) => css`
+    align-items: baseline;
+    background: ${color ? `rgba(${color}, .2)` : '#FFF'};
+    border: 1px solid ${color ? `rgba(${color}, .2)` : '#E6E6E6'};
+    border-bottom: none;
+    border-radius: 15px 15px 0 0;
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+
+    > span {
+      color: ${color ? `rgb(${color})` : '#494949'};
+      font-size: .9rem;
+      font-weight: 500;
+    }
+  `}
+`
+
+export const Content = styled.section`
+  padding: 1rem;
+  border: 1px solid #E6E6E6;
+  border-radius: 0 0 15px 15px;
 `
 
 export const Logo =  styled.div`
   align-items: center;
-  background: #FFF;
+  background: #f72f2f;
   border-radius: 10px;
   display: flex;
-  padding: .5rem;
-  height: 90px;
-  width: 90px;
+  height: 70px;
+  width: 70px;
+  position: absolute;
 `
