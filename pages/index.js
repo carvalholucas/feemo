@@ -9,8 +9,10 @@ import Header from '../components/Header'
 import Feed from '../components/Feed'
 import Card from '../components/Card'
 
+const TIME_TO_SPLASH_SCREEN = 4000
+
 const Home = () => {
-  const [showSplash] = useSplash(3000)
+  const [showSplash] = useSplash(TIME_TO_SPLASH_SCREEN)
 
   const handleClickCard = () => {
     console.log('Open coupom card')

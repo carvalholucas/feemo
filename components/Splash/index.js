@@ -1,14 +1,12 @@
-import Image from 'next/image'
-
-import { Container } from './styles'
+import { Container, AnimatedIcon } from './styles'
 
 const Splash = () => {
   return (
     <Container>
-      <Image
-        src="/images/logo_light.png"
-        width={185}
-        height={62}
+      <AnimatedIcon
+        src="/images/icon_light.png"
+        width={100}
+        height={70}
       />
     </Container>
   )
