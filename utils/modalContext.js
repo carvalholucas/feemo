@@ -14,7 +14,7 @@ const INITIAL_MODAL_PROPS = {
   closeIcon: true,
   colorHeader: '#FFF',
   colorIcons: '#8b8b8b',
-  colorTitle: '#8b8b8b',
+  colorTitle: '#494949',
   height: '100%',
   position: 'bottom'
 }

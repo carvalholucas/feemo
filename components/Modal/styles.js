@@ -19,6 +19,7 @@ export const Backdrop = styled.div`
     background-color: rgba(0, 0, 0, .8);
     display: flex;
     justify-content: center;
+    z-index: 999;
 
     ${!!position && wrapperModifiers[position]}
   `}
@@ -27,7 +28,7 @@ export const Backdrop = styled.div`
 export const Container = styled.div`
   ${({ height }) => css`
     background: #FFF;
-    height: ${height ? height : '80%'};
+    height: ${height};
     width: 100%;
   `}
 `
@@ -35,9 +36,11 @@ export const Container = styled.div`
 export const Header = styled.header`
   ${({ colorHeader }) => css`
     align-items: center;
-    background: ${!!colorHeader ? colorHeader : '#fff'};
+    background: ${colorHeader};
+    border-bottom: 5px solid #F5F5F5;
     display: flex;
-    height: 70px;
+    font-weight: 400;
+    height: 80px;
     justify-content: center;
     padding: 1.2rem;
 
@@ -56,7 +59,7 @@ export const Header = styled.header`
 export const Title = styled.h2`
   ${({ colorTitle }) => css`
     color: ${colorTitle};
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 400;
     margin: 0;
   `}
