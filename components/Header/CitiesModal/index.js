@@ -1,13 +1,11 @@
-import { useState } from 'react'
+import { HiChevronRight as ArrowRight } from "react-icons/hi"
 
-import { useModal } from '../../utils/modalContext'
-import Button from '../Button'
+import { useModal } from '../../../utils/modalContext'
 
 import {
   List,
   ListItem,
-  ContainerModal,
-  ButtonWrapper
+  ContainerModal
 } from './styles'
 
 const CitiesModal = ({
@@ -15,12 +13,11 @@ const CitiesModal = ({
   citySelected,
   setCitySelected
 }) => {
-  const [buttonDisabled, setButtonDisabled] = useState(true)
   const { toggleModal } = useModal()
 
   const handleChangeCity = (city) => {
     setCitySelected(city)
-    setButtonDisabled(false)
+    toggleModal()
   }
 
   return (
@@ -33,18 +30,10 @@ const CitiesModal = ({
             onClick={() => handleChangeCity(city)}
           >
             {city.name}
+            <ArrowRight size="1.5rem"/>
           </ListItem>
         ))}
       </List>
-
-      <ButtonWrapper>
-        <Button
-          label="Confirmar"
-          color="secondary"
-          disabled={buttonDisabled}
-          onClick={() => toggleModal()}
-        />
-      </ButtonWrapper>
     </ContainerModal>
   )
 }
