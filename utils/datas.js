@@ -5,6 +5,7 @@ export const coupons = [
     title: "Hamburguer com 10% OFF",
     description: "Desconto de 25% em qualquer compra realizada acima de $50 em nosso...",
     color: '247, 47, 47',
+    colorTitle: '#f72f2f',
     logo: '/images/logo_example2.png',
   },
   {
@@ -13,6 +14,7 @@ export const coupons = [
     title: "Hamburguer com 10% OFF",
     description: "Desconto de 25% em qualquer compra realizada acima de $50 em nosso...",
     color: '247, 47, 47',
+    colorTitle: '#f72f2f',
     logo: '/images/logo_example2.png',
   },
   {
