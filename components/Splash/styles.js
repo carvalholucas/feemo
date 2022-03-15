@@ -7,6 +7,9 @@ export const Container = styled.section`
   background: #362076;
   display: flex;
   height: 100vh;
+  min-height: 100vh;
+  min-height: fill-available;
+  min-height: -webkit-fill-available;
   justify-content: center;
   width: 100%;
 `
