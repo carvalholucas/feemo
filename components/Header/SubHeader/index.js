@@ -1,3 +1,5 @@
+import { useEffect } from 'react'
+
 import { HiChevronDown as ArrowDown } from "react-icons/hi"
 import { MdOutlinePlace as PlaceIcon } from "react-icons/md"
 
@@ -6,6 +8,8 @@ import { useCities } from '../../../utils/citiesContext'
 
 import CitiesModal from '../CitiesModal'
 import { Container } from './styles'
+
+const INITIAL_CITY_LABEL = 'Selecione uma cidade'
 
 const SubHeader = () => {
   const { openModal } = useModal()
@@ -30,13 +34,19 @@ const SubHeader = () => {
     })
   }
 
+  useEffect(() => {
+    !citySelected?.name && handleCities()
+  }, [citySelected])
+
   return (
     <Container onClick={handleCities}>
       <div className="place-icon">
-        <PlaceIcon size="1.5rem"/>
+        <PlaceIcon size="1.8rem" />
       </div>
-      <span>{citySelected?.name || 'Selecione uma cidade'}</span>
-      <ArrowDown size="1.5rem"/>
+      <span>
+        {citySelected?.name || INITIAL_CITY_LABEL}
+      </span>
+      <ArrowDown size="1.5rem" />
     </Container>
   )
 }
