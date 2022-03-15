@@ -2,7 +2,7 @@ import {
   createContext,
   useContext,
   useState,
-  useEffect
+  useEffect,
 } from 'react'
 
 export const CityContext = createContext({})
@@ -30,6 +30,14 @@ export const CityContextProvider = ({ children }) => {
     citySelected,
     setCitySelected
   }
+
+  useEffect(() => {
+    const cityStoraged = JSON.parse(localStorage.getItem('city'))
+
+    if(!citySelected?.name && !!cityStoraged) {
+      setCitySelected(cityStoraged)
+    }
+  }, [])
 
   return (
     <CityContext.Provider value={state}>
