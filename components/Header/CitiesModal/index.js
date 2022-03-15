@@ -17,6 +17,7 @@ const CitiesModal = ({
 
   const handleChangeCity = (city) => {
     setCitySelected(city)
+    localStorage.setItem('city', JSON.stringify(city))
     toggleModal()
   }
 
@@ -30,7 +31,7 @@ const CitiesModal = ({
             onClick={() => handleChangeCity(city)}
           >
             {city.name}
-            <ArrowRight size="1.5rem"/>
+            <ArrowRight size="2rem" />
           </ListItem>
         ))}
       </List>
