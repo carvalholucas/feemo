@@ -39,6 +39,16 @@ export const ModalContextProvider = ({ children }) => {
     modalPros.isVisible && setIsShown(modalPros.isVisible)
   }, [modalPros])
 
+  useEffect(() => {
+    const body = document.querySelector("body")
+    
+    if(isShown) {
+      body.style.overflow = 'hidden'
+    } else {
+      body.style.overflow = 'auto'
+    }
+  }, [isShown])
+
   return (
     <ModalContext.Provider value={state}>
       <Modal {...modalPros} />
