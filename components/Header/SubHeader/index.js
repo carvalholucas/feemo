@@ -33,7 +33,7 @@ const SubHeader = () => {
   return (
     <Container onClick={handleCities}>
       <div className="place-icon">
-        <PlaceIcon size="1.2rem"/>
+        <PlaceIcon size="1.5rem"/>
       </div>
       <span>{citySelected?.name || 'Selecione uma cidade'}</span>
       <ArrowDown size="1.5rem"/>

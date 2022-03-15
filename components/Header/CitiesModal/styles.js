@@ -13,7 +13,7 @@ export const ListItem = styled.li`
   color: #494949;
   display: flex;
   justify-content: space-between;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 300;
   padding: 1.5rem;
 

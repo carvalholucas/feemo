@@ -42,16 +42,16 @@ export const Header = styled.header`
     font-weight: 400;
     height: 80px;
     justify-content: center;
-    padding: 1.2rem;
+    padding: 1.5rem;
 
     .back-icon {
       position: absolute;
-      left: 1rem;
+      left: 1.5rem;
     }
 
     .close-icon {
       position: absolute;
-      right: 1rem;
+      right: 1.5rem;
     }
   `}
 `
@@ -59,7 +59,7 @@ export const Header = styled.header`
 export const Title = styled.h2`
   ${({ colorTitle }) => css`
     color: ${colorTitle};
-    font-size: 1rem;
+    font-size: 1.3rem;
     font-weight: 400;
     margin: 0;
   `}

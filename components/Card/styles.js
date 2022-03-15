@@ -6,7 +6,7 @@ const wrapperModifiers = {
   `,
   premium: () => css`
     .header > span {
-      margin-left: calc(70px + 1rem);
+      margin-left: calc(5rem + 1.5rem);
     }
 
     .ticket-title {
@@ -20,23 +20,23 @@ export const Container = styled.div`
   ${({ type, color, textColor }) => css`
     background: #FFF;
     border-radius: 15px;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 
     &:nth-child(2) {
-      margin-top: 1rem;
+      margin-top: 1.5rem;
     }
 
     .ticket-title {
       color: ${textColor ? textColor : '#000000'};
-      font-size: 1.2rem;
+      font-size: 1.4rem;
       margin: 0;
     }
 
     .ticket-description {
       color: ${textColor ? textColor : '#686868'};
-      font-size: .9rem;
+      font-size: 1.1rem;
       font-weight: 300;
-      line-height: 1.5rem;
+      line-height: 1.8rem;
       margin-bottom: 0;
     }
 
@@ -52,19 +52,18 @@ export const Header = styled.header`
     border-bottom: none;
     border-radius: 15px 15px 0 0;
     display: flex;
-    gap: 1rem;
-    padding: 1rem;
+    padding: 1.5rem 1.5rem 1rem;
 
     > span {
       color: ${color ? `rgb(${color})` : '#494949'};
-      font-size: .9rem;
+      font-size: 1.1rem;
       font-weight: 500;
     }
   `}
 `
 
 export const Content = styled.section`
-  padding: 1rem;
+  padding: 1.5rem;
   border: 1px solid #E6E6E6;
   border-radius: 0 0 15px 15px;
 `
@@ -74,7 +73,7 @@ export const Logo =  styled.div`
   background: #f72f2f;
   border-radius: 10px;
   display: flex;
-  height: 70px;
-  width: 70px;
+  height: 5rem;
+  width: 5rem;
   position: absolute;
 `

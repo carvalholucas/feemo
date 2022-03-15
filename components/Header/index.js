@@ -22,7 +22,7 @@ const Header = () => {
         <MenuIcon
           color="#7A3DF6"
           className="hamburguer-icon"
-          size="1.6rem"
+          size="2rem"
           onClick={handleMenu}
         />
 
