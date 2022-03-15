@@ -40,7 +40,7 @@ export const Header = styled.header`
     border-bottom: 5px solid #F5F5F5;
     display: flex;
     font-weight: 400;
-    height: 80px;
+    height: 7rem;
     justify-content: center;
     padding: 1.5rem;
 
@@ -66,5 +66,5 @@ export const Title = styled.h2`
 `
 
 export const Content = styled.div`
-  height: calc(100% - 70px);
+  height: calc(100% - 7rem);
 `

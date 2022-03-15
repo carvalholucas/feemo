@@ -43,7 +43,7 @@ const Modal = ({
                   <BackIcon
                     className="back-icon"
                     color={colorIcons}
-                    size="2rem"
+                    size="2.2rem"
                     onClick={toggleModal}
                   />
                 )}
@@ -54,7 +54,7 @@ const Modal = ({
                   <CloseIcon
                     className="close-icon"
                     color={colorIcons}
-                    size="1.5rem"
+                    size="2rem"
                     onClick={toggleModal}
                   />
                 )}
