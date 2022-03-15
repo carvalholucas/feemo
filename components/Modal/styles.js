@@ -29,6 +29,7 @@ export const Container = styled.div`
   ${({ height }) => css`
     background: #FFF;
     height: ${height};
+    overflow: scroll;
     width: 100%;
   `}
 `
@@ -36,13 +37,14 @@ export const Container = styled.div`
 export const Header = styled.header`
   ${({ colorHeader }) => css`
     align-items: center;
-    background: ${colorHeader};
+    background: ${`rgba(${colorHeader}, .2)`};
     border-bottom: 5px solid #F5F5F5;
     display: flex;
     font-weight: 400;
     height: 7rem;
     justify-content: center;
     padding: 1.5rem;
+    position: relative;
 
     .back-icon {
       position: absolute;
@@ -58,8 +60,8 @@ export const Header = styled.header`
 
 export const Title = styled.h2`
   ${({ colorTitle }) => css`
-    color: ${colorTitle};
-    font-size: 1.3rem;
+    color: ${`rgb(${colorTitle})`};
+    font-size: 1.4rem;
     font-weight: 400;
     margin: 0;
   `}

@@ -2,20 +2,31 @@ import Head from 'next/head'
 
 import useSplash from '../utils/useSplash'
 import { coupons } from '../utils/datas'
+import { useModal } from '../utils/modalContext'
 
 import Layout from '../components/Layout'
 import Splash from '../components/Splash'
 import Header from '../components/Header'
 import Feed from '../components/Feed'
 import Card from '../components/Card'
+import CardModal from '../components/Card/CardModal'
 
 const TIME_TO_SPLASH_SCREEN = 4000
 
 const Home = () => {
   const [showSplash] = useSplash(TIME_TO_SPLASH_SCREEN)
+  const { openModal } = useModal()
 
-  const handleClickCard = () => {
-    console.log('Open coupom card')
+  const handleClickCard = (ticket) => {
+    openModal({
+      isVisible: true,
+      title: ticket.companyName,
+      colorHeader: ticket.color,
+      colorTitle: ticket.color,
+      colorIcons: ticket.color,
+      height: '70%',
+      content: <CardModal {...ticket}/>
+    })
   }
 
   return (

@@ -71,7 +71,7 @@ export const Content = styled.section`
 export const Logo =  styled.div`
   align-items: center;
   background: #f72f2f;
-  border-radius: 10px;
+  border-radius: 1rem;
   display: flex;
   height: 5rem;
   width: 5rem;
