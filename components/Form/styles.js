@@ -8,7 +8,7 @@ export const FormItemWrapper = styled.div`
   gap: 1rem;
 `
 
-export const FormWrapper = styled.div`
+export const FormWrapper = styled.form`
   height: 100%;
   margin-top: 2rem; 
   
@@ -20,7 +20,7 @@ export const FormWrapper = styled.div`
 
   > p {
     color: #606060;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-weight: 300;
     margin-bottom: 6rem;
   }

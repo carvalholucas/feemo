@@ -1,3 +1,4 @@
+import { useForm } from 'react-hook-form'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -6,10 +7,28 @@ import { Form } from '../components/Form'
 import Field from '../components/Field'
 import Button from '../components/Button'
 
+import { useModal } from '../utils/modalContext'
+
 const SignInPage = () => {
+  const { openModal } = useModal()
+
+  const {
+    handleSubmit,
+    register
+  } = useForm()
+
+  const handleForgetPass = () => {
+    openModal({
+      isVisible: true,
+      height: '40%',
+    })
+  }
+
+  const handleSignIn = data => console.log(data)
+
   return (
     <Container>
-      <Form>
+      <Form onSubmit={handleSubmit(handleSignIn)}>
         <Image
           src="/images/icon_dark.png"
           width={50}
@@ -17,26 +36,37 @@ const SignInPage = () => {
         />
 
         <h1>Você de volta?</h1>
-        <p>Seja bem-vindo de volta, você fez falta, conecte-se novamente :)</p>
+        <p>Seja bem-vindo de volta, você fez muita falta, conecte-se novamente :)</p>
 
         <Field
+          register={register}
+          id="email-field"
+          name="email"
           label="Email"
+          type="email"
           placeholder="Informe seu email"
         />
 
         <Field
+          register={register}
+          id="password-field"
+          name="password"
           label="Senha"
           type="password"
           placeholder="Informe sua senha"
         />
 
-        <Link href="/reset">
-          <a className="link link-forget">Esqueci senha?</a>
-        </Link>
+        <a
+          className="link link-forget"
+          onClick={() => handleForgetPass()}
+        >
+          Esqueci senha?
+        </a>
 
         <Button
           label="Entrar"
           color="secondary"
+          type="submit"
           style={{ marginTop: '2rem' }}
         />
 

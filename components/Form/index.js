@@ -11,9 +11,9 @@ export const FormItem = ({ children }) => {
   )
 }
 
-export const Form = ({ children }) => {
+export const Form = ({ children, ...props }) => {
   return (
-    <FormWrapper>
+    <FormWrapper {...props}>
       {children}
     </FormWrapper>
   )

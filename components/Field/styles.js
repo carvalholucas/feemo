@@ -9,6 +9,12 @@ export const FieldtWrapper = styled.div`
   &:nth-child(2) {
     margin-top: 4rem;
   }
+
+  .icon-eye {
+    margin-top: 1.2rem;
+    position: absolute;
+    right: 4rem;
+  }
 `
 
 export const Input = styled.input`
@@ -22,6 +28,7 @@ export const Input = styled.input`
   outline: none;
   padding: 0 20px;
   transition: all .3s;
+  width: 100%;
 
   &::placeholder {
     opacity: 50%;
