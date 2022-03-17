@@ -1,4 +1,6 @@
 import Head from 'next/head'
+import { useEffect, useState } from 'react'
+import { FiPlus } from 'react-icons/fi'
 
 import useSplash from '../utils/useSplash'
 import { coupons } from '../utils/datas'
@@ -10,12 +12,14 @@ import Header from '../components/Header'
 import Feed from '../components/Feed'
 import Card from '../components/Card'
 import CardModal from '../components/Card/CardModal'
+import FloatButton from '../components/Button/FloatButton'
 
 const TIME_TO_SPLASH_SCREEN = 4000
 
 const Home = () => {
   const [showSplash] = useSplash(TIME_TO_SPLASH_SCREEN)
   const { openModal } = useModal()
+  const [addButtonIsShown, setAddButtonIsShown] = useState(false)
 
   const handleClickCard = (ticket) => {
     openModal({
@@ -25,9 +29,19 @@ const Home = () => {
       colorTitle: ticket.color,
       colorIcons: ticket.color,
       height: '70%',
-      content: <CardModal {...ticket}/>
+      content: <CardModal {...ticket} />
     })
   }
+
+  useEffect(() => {
+    const handleFloatButton = () => {
+      setAddButtonIsShown(window.scrollY > 100 ? true : false)
+    }
+
+    window.addEventListener('scroll', handleFloatButton)
+
+    return () => window.removeEventListener("scroll", handleFloatButton)
+  }, [])
 
   return (
     <>
@@ -57,6 +71,13 @@ const Home = () => {
               />
             ))}
           </Feed>
+            <FloatButton isVisible={addButtonIsShown}>
+              <FiPlus
+                color="#FFF"
+                size="2rem"
+              />
+            </FloatButton>
+          )}
         </Layout>
       )}
     </>

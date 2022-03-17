@@ -11,7 +11,7 @@ export const Grid = styled.main`
 export const Wrapper = styled.main`
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: 100vh;
   justify-content: center;
   padding: 1.5rem;
 `

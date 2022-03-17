@@ -1,4 +1,3 @@
-import { useSession, signIn, signOut } from "next-auth/react"
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -8,8 +7,6 @@ import Field from '../components/Field'
 import Button from '../components/Button'
 
 const SignInPage = () => {
-  const { data: session } = useSession()
-
   return (
     <Container>
       <Form>
@@ -38,15 +35,6 @@ const SignInPage = () => {
           color="secondary"
           style={{ marginTop: '1rem' }}
         />
-
-        {!session && (
-          <Button
-            label="Logar com Google"
-            color="secondary"
-            onClick={() => signIn()}
-            style={{ marginTop: '1rem' }}
-          />
-        )}
 
         <Link href="/signup">
           <a className="link">Sem acesso ainda? <span>Criar conta</span></a>
