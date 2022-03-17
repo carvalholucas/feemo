@@ -16,8 +16,8 @@ const SignInPage = () => {
           height={35}
         />
 
-        <h1>Bora começar?</h1>
-        <p>Para acessar sua conta, faça o login com seus dados nos campos abaixo :)</p>
+        <h1>Você de volta?</h1>
+        <p>Seja bem-vindo de volta, você fez falta, conecte-se novamente :)</p>
 
         <Field
           label="Email"
@@ -51,7 +51,6 @@ const SignInPage = () => {
             height={19}
           />
         </footer>
-
       </Form>
     </Container>
   )

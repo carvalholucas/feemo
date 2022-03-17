@@ -22,7 +22,7 @@ export const FormWrapper = styled.div`
     color: #606060;
     font-size: 1.4rem;
     font-weight: 300;
-    margin-bottom: 8rem;
+    margin-bottom: 6rem;
   }
 
   > footer {

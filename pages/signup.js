@@ -6,15 +6,19 @@ import { Form } from '../components/Form'
 import Field from '../components/Field'
 import Button from '../components/Button'
 
-const SignUp = () => {
+const SignUpPage = () => {
   return (
     <Container>
       <Form>
         <Image
-          src="/images/logo_dark.png"
-          width={162}
-          height={50}
+          src="/images/icon_dark.png"
+          width={50}
+          height={35}
         />
+
+        <h1>Bora começar?</h1>
+        <p>Crie uma conta para continuar, é rapidinho :)</p>
+
         <Field
           label="Email"
           placeholder="Informe seu email"
@@ -35,15 +39,23 @@ const SignUp = () => {
         <Button
           label="Confirmar"
           color="secondary"
-          style={{ marginTop: '1rem' }}
+          style={{ marginTop: '2rem' }}
         />
 
         <Link href="/signin">
           <a className="link">Já tem uma conta? <span>Entrar</span></a>
         </Link>
+
+        <footer>
+          <Image
+            src="/images/logo_dark.png"
+            width={60}
+            height={19}
+          />
+        </footer>
       </Form>
     </Container>
   )
 }
 
-export default SignUp
+export default SignUpPage
