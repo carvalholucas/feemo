@@ -11,10 +11,14 @@ const SignInPage = () => {
     <Container>
       <Form>
         <Image
-          src="/images/logo_dark.png"
-          width={162}
-          height={50}
+          src="/images/icon_dark.png"
+          width={50}
+          height={35}
         />
+
+        <h1>Bora começar?</h1>
+        <p>Para acessar sua conta, faça o login com seus dados nos campos abaixo :)</p>
+
         <Field
           label="Email"
           placeholder="Informe seu email"
@@ -33,12 +37,21 @@ const SignInPage = () => {
         <Button
           label="Entrar"
           color="secondary"
-          style={{ marginTop: '1rem' }}
+          style={{ marginTop: '2rem' }}
         />
 
         <Link href="/signup">
           <a className="link">Sem acesso ainda? <span>Criar conta</span></a>
         </Link>
+
+        <footer>
+          <Image
+            src="/images/logo_dark.png"
+            width={60}
+            height={19}
+          />
+        </footer>
+
       </Form>
     </Container>
   )

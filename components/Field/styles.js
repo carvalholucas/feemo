@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const FieldtWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   width: 100%;
 
   &:nth-child(2) {
@@ -12,8 +12,8 @@ export const FieldtWrapper = styled.div`
 `
 
 export const Input = styled.input`
-  background: #ffffff;
-  border: 1px solid #afafaf;
+  background: #F5F5F5;
+  border: 1px solid #E6E6E6;
   border-radius: 5px;
   color: #292C30;
   font-size: 1.4rem;
@@ -46,5 +46,5 @@ export const Input = styled.input`
 export const Label = styled.label`
   font-size: 1.2rem;
   font-weight: 600;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 `

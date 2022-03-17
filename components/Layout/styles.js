@@ -12,6 +12,5 @@ export const Wrapper = styled.main`
   display: flex;
   flex-direction: column;
   height: 100vh;
-  justify-content: center;
-  padding: 1.5rem;
+  padding: 2.5rem;
 `
