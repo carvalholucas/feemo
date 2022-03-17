@@ -1,3 +1,4 @@
+import { useSession, signIn, signOut } from "next-auth/react"
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -6,7 +7,9 @@ import { Form } from '../components/Form'
 import Field from '../components/Field'
 import Button from '../components/Button'
 
-const Register = () => {
+const SignInPage = () => {
+  const { data: session } = useSession()
+
   return (
     <Container>
       <Form>
@@ -26,24 +29,31 @@ const Register = () => {
           placeholder="Informe sua senha"
         />
 
-        <Field
-          label="Confirmar Senha"
-          type="confirm_password"
-          placeholder="Confirme sua senha"
-        />
+        <Link href="/reset">
+          <a className="link link-forget">Esqueci senha?</a>
+        </Link>
 
         <Button
-          label="Confirmar"
+          label="Entrar"
           color="secondary"
           style={{ marginTop: '1rem' }}
         />
 
-        <Link href="/login">
-          <a className="link">Já tem uma conta? <span>Entrar</span></a>
+        {!session && (
+          <Button
+            label="Logar com Google"
+            color="secondary"
+            onClick={() => signIn()}
+            style={{ marginTop: '1rem' }}
+          />
+        )}
+
+        <Link href="/signup">
+          <a className="link">Sem acesso ainda? <span>Criar conta</span></a>
         </Link>
       </Form>
     </Container>
   )
 }
 
-export default Register
+export default SignInPage

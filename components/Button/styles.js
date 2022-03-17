@@ -22,8 +22,8 @@ export const Container = styled.button`
     border: none;
     border-radius: 5px;
     color: #FFF;
-    font-size: 1.1rem;
-    padding: 1.2rem 1rem;
+    font-size: 1.4rem;
+    padding: 1.5rem 1rem;
 
     &:disabled {
       opacity: .5;

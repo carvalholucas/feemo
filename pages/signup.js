@@ -6,7 +6,7 @@ import { Form } from '../components/Form'
 import Field from '../components/Field'
 import Button from '../components/Button'
 
-const Login = () => {
+const SignUp = () => {
   return (
     <Container>
       <Form>
@@ -26,22 +26,24 @@ const Login = () => {
           placeholder="Informe sua senha"
         />
 
-        <Link href="/reset">
-          <a className="link link-forget">Esqueci senha?</a>
-        </Link>
+        <Field
+          label="Confirmar Senha"
+          type="confirm_password"
+          placeholder="Confirme sua senha"
+        />
 
         <Button
-          label="Entrar"
+          label="Confirmar"
           color="secondary"
           style={{ marginTop: '1rem' }}
         />
 
-        <Link href="/register">
-          <a className="link">Sem acesso ainda? <span>Criar conta</span></a>
+        <Link href="/signin">
+          <a className="link">Já tem uma conta? <span>Entrar</span></a>
         </Link>
       </Form>
     </Container>
   )
 }
 
-export default Login
+export default SignUp

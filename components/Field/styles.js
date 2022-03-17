@@ -16,8 +16,8 @@ export const Input = styled.input`
   border: 1px solid #afafaf;
   border-radius: 5px;
   color: #292C30;
-  font-size: 1.1rem;
-  height: 3rem;
+  font-size: 1.4rem;
+  height: 4.5rem;
   line-height: 50px;
   outline: none;
   padding: 0 20px;
@@ -44,6 +44,7 @@ export const Input = styled.input`
 `
 
 export const Label = styled.label`
+  font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 1rem;
 `
