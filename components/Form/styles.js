@@ -24,14 +24,4 @@ export const FormWrapper = styled.form`
     font-weight: 300;
     margin-bottom: 6rem;
   }
-
-  > footer {
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    left: 0;
-    padding: 2rem;
-    position: absolute;
-    width: 100%;
-  }
 `

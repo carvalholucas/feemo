@@ -65,15 +65,6 @@ const SignUpPage = () => {
         <Link href="/signin">
           <a className="link">Já tem uma conta? <span>Entrar</span></a>
         </Link>
-
-        <footer>
-          <Image
-            src="/images/logo_dark.png"
-            alt="Logotipo da Feemo"
-            width={60}
-            height={19}
-          />
-        </footer>
       </Form>
     </Container>
   )

@@ -74,15 +74,6 @@ const SignInPage = () => {
         <Link href="/signup">
           <a className="link">Sem acesso ainda? <span>Criar conta</span></a>
         </Link>
-
-        <footer>
-          <Image
-            src="/images/logo_dark.png"
-            alt="Logotipo da Feemo"
-            width={60}
-            height={19}
-          />
-        </footer>
       </Form>
     </Container>
   )
