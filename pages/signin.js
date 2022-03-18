@@ -31,6 +31,7 @@ const SignInPage = () => {
       <Form onSubmit={handleSubmit(handleSignIn)}>
         <Image
           src="/images/icon_dark.png"
+          alt="Icone da Feemo"
           width={50}
           height={35}
         />
@@ -77,6 +78,7 @@ const SignInPage = () => {
         <footer>
           <Image
             src="/images/logo_dark.png"
+            alt="Logotipo da Feemo"
             width={60}
             height={19}
           />
