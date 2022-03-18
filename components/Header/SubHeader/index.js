@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useCallback } from 'react'
 
 import { HiChevronDown as ArrowDown } from "react-icons/hi"
 import { MdOutlinePlace as PlaceIcon } from "react-icons/md"
@@ -19,7 +19,7 @@ const SubHeader = () => {
     setCitySelected
   } = useCities()
 
-  const handleCities = () => {
+  const handleCities = useCallback(() => {
     openModal({
       isVisible: true,
       title: 'Selecione uma cidade',
@@ -32,11 +32,16 @@ const SubHeader = () => {
         setCitySelected={setCitySelected}
       />
     })
-  }
+  }, [
+    allCities,
+    citySelected,
+    setCitySelected,
+    openModal
+  ])
 
   useEffect(() => {
     !citySelected?.name && handleCities()
-  }, [citySelected])
+  }, [citySelected, handleCities])
 
   return (
     <Container onClick={handleCities}>

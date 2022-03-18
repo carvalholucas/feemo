@@ -71,13 +71,12 @@ const Home = () => {
               />
             ))}
           </Feed>
-            <FloatButton isVisible={addButtonIsShown}>
-              <FiPlus
-                color="#FFF"
-                size="2rem"
-              />
-            </FloatButton>
-          )}
+          <FloatButton isVisible={addButtonIsShown}>
+            <FiPlus
+              color="#FFF"
+              size="2rem"
+            />
+          </FloatButton>
         </Layout>
       )}
     </>

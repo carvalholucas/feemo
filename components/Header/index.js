@@ -28,6 +28,7 @@ const Header = () => {
 
         <Image
           src="/images/icon_dark.png"
+          alt="Icone da Feemo"
           width={40}
           height={28}
         />
